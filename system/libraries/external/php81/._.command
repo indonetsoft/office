@@ -12,3 +12,6 @@ cd ../
 cd PHPWord/
 /usr/bin/php8.1 ~/bin/composer require phpoffice/phpword
 cd ../
+#cd google/apiclient
+#/usr/bin/php8.1 ~/bin/composer require google/apiclient
+#cd ../../
