@@ -5,7 +5,7 @@ RewriteBase /
 
 # Block direct access to sensitive folders other than static
 RewriteCond %{REQUEST_URI} \.(ico|gif|jpe?g|png|webp|avif|bmp|tiff?|jfif|svgz?|eot|ttf|ttc|otf|woff2?|css|js|xml|json|mp4|webm|ogg|mp3|wav|zip|gz)$ [NC]
-RewriteCond %{REQUEST_URI} ^/(system|app|root|vendor|storage)/ [NC]
+RewriteCond %{REQUEST_URI} ^/(application|app|system|root|vendor|storage)/ [NC]
 RewriteRule .* - [L]
 
 RewriteRule (^|/)\.(env|git|svn|htaccess|ini|log|sh|bak|sql)$ - [F,L]
