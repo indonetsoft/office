@@ -22,7 +22,10 @@ RewriteRule \.(ico|gif|jpe?g|png|webp|avif|bmp|tiff?|jfif|svgz?|eot|ttf|ttc|otf|
 RewriteCond %{QUERY_STRING} (\.\./|\.\.\\|%3C|%3E|<script|</script>|javascript:|\bunion\b|\bselect\b|\binsert\b|\bdrop\b|\bsleep\b|\bbenchmark\b) [NC]
 RewriteRule .* - [F,L]
 
-#.rewrite.htaccess
+# Invoice Print Short URL
+# Original: DOMAIN/system_manager/invoice/print_invoice/KODE.html
+# Short:    DOMAIN/smg/inv/p/KODE
+RewriteRule ^smg/inv/p/([A-Z0-9]{8})$ index.php?/system_manager/invoice/print_invoice/$1 [L,QSA]
 #.own.rewrite.htaccess
 
 RewriteRule ^login/?$ index.php?/users/user/login [L,QSA]
